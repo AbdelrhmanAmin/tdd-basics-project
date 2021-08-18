@@ -12,9 +12,9 @@ class Stack {
     this.top += 1;
     this.items[this.top] = value;
   }
-  pop(){
+  pop() {
     this.items[this.top] = null;
-    this.top -=1;
+    this.top -= 1;
   }
 }
 
@@ -40,9 +40,10 @@ describe('My Stack', () => {
     expect(stack.peek).toBe('🌽');
   });
 
-  it.todo('can pop off', () => {
+  it('can pop off', () => {
     stack.push('🥑');
     expect(stack.top).toBe(0);
+    expect(stack.peek).toBe('🥑');
     stack.pop()
     expect(stack.top).toBe(-1);
   });
